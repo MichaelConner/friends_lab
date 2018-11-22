@@ -121,6 +121,7 @@ class TestFriends < MiniTest::Test
     assert_equal(1, new_length - old_length)
   end
 
+
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
 
@@ -156,6 +157,18 @@ class TestFriends < MiniTest::Test
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
   # (hint2: You should test if both the lender's and the lendee's money have changed, maybe two assertions?)
 
+def test_lend_money_transfers_money
+  #Setup
+  lender_before =
+  lender_after =
+  lendee_before =
+  lendee_after =
+  loan =
+  #act
+  #assert
+  assert_equal(loan, lender_before - lender_after)
+  assert_equal(loan, lendee_after- lendee_before)
+end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
