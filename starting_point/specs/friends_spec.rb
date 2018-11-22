@@ -74,12 +74,13 @@ class TestFriends < MiniTest::Test
   # 2. For a given person, return their favourite tv show
   # (e.g. the function favourite_tv_show(@person2) should return the string "Baywatch")
 
-  def test_return_tv_show
+  def test_return_tv_show__person1
     result = return_tv_show(@person1)
     assert_equal("Friends", result)
   end
 
-  def test_return_tv_show
+
+  def test_return_tv_show__person2
     result = return_tv_show(@person2)
     assert_equal("Baywatch", result)
   end
@@ -88,6 +89,15 @@ class TestFriends < MiniTest::Test
   # 3. For a given person, check if they like a particular food
   # (e.g. the function likes_to_eat(@person2, "bread") should return true, likes_to_eat(@person3, "spinach") should return false)
 
+  def test_likes_to_eat__person3_true
+     result = likes_to_eat(@person3, "Scooby snacks")
+     assert_equal(true, result)
+  end
+
+  def test_likes_to_eat__person3_false
+     result = likes_to_eat(@person3, "pizza")
+     assert_equal(false, result)
+  end
 
 
 
