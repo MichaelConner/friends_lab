@@ -19,9 +19,17 @@ end
 
 
 def add_friend(person, friend)
-person[:friends]  << friend
+  person[:friends]  << friend
 end
 
 def remove_friend(person, friend)
-person[:friends].delete(friend)  
+  person[:friends].delete(friend)
+end
+
+def sum_money(list_of_people)
+  total_monies = 0
+  for person in list_of_people
+    total_monies += person[:monies]
+  end
+  return total_monies
 end
