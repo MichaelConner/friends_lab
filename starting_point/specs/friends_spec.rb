@@ -106,6 +106,23 @@ class TestFriends < MiniTest::Test
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
 
+  def test_add_friend__works
+    result = add_friend(@person1, "George")
+  end
+
+
+  def test_add_friend_modifies_array
+    # setup
+    old_length = @person1[:friends].length
+    # act
+    add_friend(@person1, "George")
+    # assert
+    new_length = @person1[:friends].length
+    assert_equal(1, new_length - old_length)
+  end
+
+
+
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
